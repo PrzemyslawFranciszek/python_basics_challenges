@@ -10,11 +10,20 @@ class Animal:
             if distance >= 0:
                 if self.exhaustion + distance < 11:
                     self.exhaustion = self.exhaustion + distance
+                    return f"{self.name} walk for {distance}, and its exhaustion raised to {self.exhaustion}!"
+                else:
+                    return "Distance or animal exhaustion is too big"
             else:
                 return "You must enter value in positive number!"                    
         except TypeError:
             return "You must enter distance in numbers!"
-
+    def sleep(self):
+        if self.exhaustion > 0:
+            self.exhaustion = self.exhaustion - 1
+            return f"{self.name} is sleeping."
+        else:
+            return f"{self.name} can't sleep."
+        
 class Cow(Animal): 
     def speak(self, sound = "MUU"):
         return super().speak(sound)
