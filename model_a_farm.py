@@ -37,3 +37,4 @@ class Pig(Animal):
         return super().speak(sound)
 bessie = Cow("Bessie", 5)
 babe = Pig("Babe", 1)
+kuka = Duck("Kuka", 5)
