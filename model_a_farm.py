@@ -35,6 +35,12 @@ class Duck(Animal):
 class Pig(Animal):
     def speak(self,sound = "OINKK"):
         return super().speak(sound)
+class Dog(Animal):
+    def speak(self,sound = "WOOF"):
+        return super().speak(sound)
+    
 bessie = Cow("Bessie", 5)
 babe = Pig("Babe", 1)
 kuka = Duck("Kuka", 5)
+doru = Dog("Dora", 4)
+
