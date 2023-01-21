@@ -11,3 +11,7 @@ with scores_file.open(mode="w", encoding="utf-8", newline="") as file:
     writer = csv.DictWriter(file, fieldnames = ["name", "score"])
     writer.writeheader()
     writer.writerows(scores)
+
+with scores_file.open(mode="r", encoding="utf-8", newline="") as file:
+    reader = csv.DictReader(file)
+    empty = [row for row in reader]
